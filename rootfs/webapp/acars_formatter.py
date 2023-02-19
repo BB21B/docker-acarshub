@@ -223,7 +223,7 @@ if __name__ == "__main__":
             print(len(message_json))
             for msg in message_json:
                 try:
-                    vdlm2_message = format_acars_message(json.loads(msg))
+                    vdlm2_message = format_acars_message(json.loads(msg,strict=False))
                 except Exception as e:
                     print(e)
                     print(msg)
