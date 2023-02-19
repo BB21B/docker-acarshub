@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM ghcr.io/sdr-enthusiasts/docker-acarshub:nextgen
+FROM ghcr.io/sdr-enthusiasts/docker-acarshub:nextgen@sha256:854421895915f85ca63ad29d8ecc47717ab9436555c494d7c2fbc11f5a9387db
 
 ENV FEED="" \
     ENABLE_ACARS="false" \
