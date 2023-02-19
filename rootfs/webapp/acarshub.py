@@ -327,7 +327,7 @@ def message_listener(message_type=None, ip="127.0.0.1", port=None):
 
             try:
                 # check if we can decode the json
-                json.loads(combined)
+                json.loads(combined, strict=False)
 
                 # no exception, json decoded fine, reassembly succeeded
                 # replace the first string in the list with the reassembled string
@@ -356,7 +356,7 @@ def message_listener(message_type=None, ip="127.0.0.1", port=None):
 
             msg = None
             try:
-                msg = json.loads(part)
+                msg = json.loads(part, strict=False)
             except ValueError as e:
 
                 if part == split_json[-1]:
